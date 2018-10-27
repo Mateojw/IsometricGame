@@ -18,9 +18,9 @@ public class IsometricPosition : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	#if UNITY_EDITOR
+	//#if UNITY_EDITOR
 	void LateUpdate(){
-		if (!Application.isPlaying) {
+		//if (!Application.isPlaying) {
 		
 			transform.position = new Vector3 
 				(	
@@ -30,8 +30,8 @@ public class IsometricPosition : MonoBehaviour {
 				);
 		}
 
-	}
-	#endif
+	//}
+	//#endif
 
 
 void OnDrawGizmos(){
