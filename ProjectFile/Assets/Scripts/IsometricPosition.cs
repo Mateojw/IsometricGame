@@ -23,11 +23,11 @@ public class IsometricPosition : MonoBehaviour {
 		if (!Application.isPlaying) {
 		
 			transform.position = new Vector3 
-			(
-				transform.position.x,
-				transform.position.y,
-				(transform.position.y - m_spriteLowerBound + m_floorHeight) * m_tan30
-			);
+				(	
+					transform.position.x,
+					transform.position.y,
+					(transform.position.y - m_spriteLowerBound + m_floorHeight) * m_tan30
+				);
 		}
 
 	}
@@ -36,11 +36,7 @@ public class IsometricPosition : MonoBehaviour {
 
 void OnDrawGizmos(){
 		Vector3 floorHeightPos = new Vector3 
-			(
-		         transform.position.x,
-		         transform.position.y - m_spriteLowerBound + m_floorHeight,
-		         transform.position.z
-         	);
+			(transform.position.x, (transform.position.y - m_spriteLowerBound + m_floorHeight) * m_tan30, transform.position.z);
 
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (floorHeightPos + Vector3.left * m_spriteHalfWith,
